@@ -4,13 +4,22 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-900 text-white sticky top-0 z-50 shadow">
+    <nav className="bg-gray-900 text-white fixed top-0 w-full z-50 shadow transition-all duration-300">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center py-3">
-        <h1 className="text-xl font-bold">DR Direção</h1>
+        
+        {/* Logo + Nome */}
+        <div className="flex items-center gap-2">
+          <img
+            src="/LogoSemTexto.png" // coloque sua logo na pasta public/
+            alt="Logo DR Direção"
+            className="h-12 w-auto" // aumentada
+          />
+          <h1 className="text-xl font-bold">DR Direção</h1>
+        </div>
 
         {/* Botão hambúrguer (mobile) */}
         <button
-          className="md:hidden focus:outline-none"
+          className="md:hidden focus:outline-none text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           ☰
