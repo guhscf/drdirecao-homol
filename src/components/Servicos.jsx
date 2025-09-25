@@ -17,9 +17,9 @@ const servicos = [
       "Inspeção detalhada dos componentes da direção hidráulica para identificar falhas e prevenir problemas futuros.",
   },
   {
-    titulo: "Alinhamento e Balanceamento",
+    titulo: "Caixa de direção mecânica para coluna elétrica",
     descricao:
-      "Ajustes no alinhamento e balanceamento para maior estabilidade, conforto e menor desgaste dos pneus.",
+      "",
   },
 ];
 

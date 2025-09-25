@@ -9,7 +9,7 @@ export default function Sobre() {
           Sobre Nós
         </h2>
         <p className="text-base md:text-lg leading-relaxed text-gray-700">
-          Nossa oficina é especializada em direção hidráulica há mais de 20 anos.
+          Nossa oficina é especializada em direção hidráulica há mais de 18 anos.
           Oferecemos atendimento rápido, peças de qualidade e garantia em todos
           os serviços.
         </p>
