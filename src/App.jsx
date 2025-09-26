@@ -7,7 +7,6 @@ import Depoimentos from "./components/Depoimentos";
 import Contato from "./components/Contato";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
-import Oficina from "./components/Oficina";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
       <Hero />
       <Servicos />
       <Sobre />
-      <Oficina />
       <Galeria />
       <Depoimentos />
       <Contato />

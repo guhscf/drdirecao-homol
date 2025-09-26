@@ -16,11 +16,11 @@ import "yet-another-react-lightbox/styles.css";
 
 export default function Galeria() {
   const imagens = [
-    { src: "servicosOficina1.jpg", alt: "Direção hidráulica 1" },
-    { src: "servicosOficina2.jpg", alt: "Direção hidráulica 2" },
-    { src: "servicosOficina3.jpg", alt: "Direção hidráulica 3" },
-    { src: "servicosOficina4.jpg", alt: "Direção hidráulica 4" },
-    { src: "servicosOficina5.jpg", alt: "Direção hidráulica 5" },
+    { src: "oficina1.jpg", alt: "Direção hidráulica 1" },
+    { src: "oficina2.jpg", alt: "Direção hidráulica 2" },
+    { src: "oficina3.jpg", alt: "Direção hidráulica 3" },
+    { src: "oficina4.jpg", alt: "Direção hidráulica 4" },
+    { src: "oficina5.jpg", alt: "Direção hidráulica 5" },
   ];
 
   const [index, setIndex] = useState(-1);

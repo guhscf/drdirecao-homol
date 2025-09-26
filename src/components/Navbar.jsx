@@ -32,7 +32,6 @@ export default function Navbar() {
           <a href="#inicio" className="hover:text-blue-400">Início</a>
           <a href="#servicos" className="hover:text-blue-400">Serviços</a>
           <a href="#sobre" className="hover:text-blue-400">Sobre</a>
-          <a href="#oficina" className="hover:text-blue-400">Oficina</a>     
           <a href="#galeria" className="hover:text-blue-400">Galeria</a>
           <a href="#depoimentos" className="hover:text-blue-400">Depoimentos</a>
           <a href="#contato" className="hover:text-blue-400">Contato</a>
@@ -45,7 +44,6 @@ export default function Navbar() {
           <a href="#inicio" className="hover:text-blue-400">Início</a>
           <a href="#servicos" className="hover:text-blue-400">Serviços</a>
           <a href="#sobre" className="hover:text-blue-400">Sobre</a>
-          <a href="#oficina" className="hover:text-blue-400">Oficina</a>
           <a href="#galeria" className="hover:text-blue-400">Galeria</a>
           <a href="#depoimentos" className="hover:text-blue-400">Depoimentos</a>
           <a href="#contato" className="hover:text-blue-400">Contato</a>
