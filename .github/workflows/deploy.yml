@@ -1,23 +1,25 @@
-name: Deploy React para cPanel
+name: "🚀 Deploy React para cPanel"
 
 on:
   push:
-    branches: [ "main", "dev" ]
+    branches:
+      - main
+      - dev
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código
+      - name: 📥 Checkout do código
         uses: actions/checkout@v3
 
-      - name: Instalar dependências e buildar
+      - name: 🏗️ Instalar dependências e buildar
         run: |
           npm install
           npm run build
 
-      - name: Deploy Produção (main)
+      - name: 📤 Deploy para Produção (main)
         if: github.ref == 'refs/heads/main'
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
@@ -27,7 +29,7 @@ jobs:
           local-dir: ./build
           server-dir: /public_html
 
-      - name: Deploy Staging (dev)
+      - name: 📤 Deploy para Staging (dev)
         if: github.ref == 'refs/heads/dev'
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
