@@ -19,11 +19,24 @@ jobs:
           npm install
           npm run build
 
-      - name: 📤 Deploy via FTP (Produção ou Staging)
+      # Deploy Produção
+      - name: 📤 Deploy para Produção (main)
+        if: github.ref == 'refs/heads/main'
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build
-          server-dir: ${{ github.ref == 'refs/heads/main' && '/public_html' || '/public_html/dev' }}
+          server-dir: /public_html
+
+      # Deploy Staging
+      - name: 📤 Deploy para Staging (dev)
+        if: github.ref == 'refs/heads/dev'
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./build
+          server-dir: /public_html/dev
