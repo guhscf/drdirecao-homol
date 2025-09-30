@@ -16,7 +16,7 @@ export default function Depoimentos() {
   useEffect(() => {
     async function fetchReviews() {
       try {
-        const res = await fetch("/api/reviews.php");
+        const res = await fetch("https://drdirecao.com.br/api/reviews");
         const data = await res.json();
 
         if (data.result && data.result.reviews) {
