@@ -6,13 +6,13 @@ export default function Contato() {
       </h2>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-        {/* Coluna Esquerda: informações */}
+        {}
         <div>
           <p className="text-gray-600 mb-6">
             Ligue, envie uma mensagem no WhatsApp ou faça-nos uma visita.
           </p>
 
-          {/* Botões responsivos */}
+          {}
           <div className="flex flex-col md:flex-row gap-3">
             <a
               href="tel:+5541998895885"
