@@ -12,7 +12,7 @@ export default function Depoimentos() {
   // Link fixo para todas as avaliações no Google Maps
   const googleReviewsUrl =
     "https://www.google.com/maps/place/?q=place_id:ChIJ763r2Qbx3JQRcsR_vqJLWYk";
-
+    
   useEffect(() => {
     async function fetchReviews() {
       try {
@@ -29,6 +29,7 @@ export default function Depoimentos() {
       }
     }
 
+    
     fetchReviews();
   }, []);
 
