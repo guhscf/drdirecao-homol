@@ -35,6 +35,8 @@ jobs:
           local-dir: ./build/
           server-dir: ./
           dangerous-clean-slate: true
+          exclude: |
+            dev/**
 
       - name: Deploy Staging (dev)
         if: github.ref == 'refs/heads/dev'
@@ -46,3 +48,5 @@ jobs:
           local-dir: ./build/
           server-dir: ./dev/
           dangerous-clean-slate: true
+          exclude: |
+            dev/**
