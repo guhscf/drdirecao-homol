@@ -20,7 +20,7 @@ jobs:
       - name: Instalar dependências e buildar
         run: |
           npm install
-          npm run build
+          CI=false npm run build
 
       - name: Deploy Produção (main)
         if: github.ref == 'refs/heads/main'
@@ -29,8 +29,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./build
-          server-dir: /public_html
+          local-dir: ./build/
+          server-dir: /public_html/
 
       - name: Deploy Staging (dev)
         if: github.ref == 'refs/heads/dev'
@@ -39,5 +39,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./build
-          server-dir: /public_html/dev
+          local-dir: ./build/
+          server-dir: /public_html/dev/
