@@ -1,4 +1,4 @@
-name: "🚀 Deploy React para cPanel"
+name: 🚀 Deploy React para cPanel
 
 on:
   push:
@@ -19,22 +19,13 @@ jobs:
           npm install
           npm run build
 
-      - name: 📤 Deploy para Produção (main)
-        if: github.ref == 'refs/heads/main'
+      - name: 📤 Deploy via FTP (Produção ou Staging)
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build
-          server-dir: /public_html
-
-      - name: 📤 Deploy para Staging (dev)
-        if: github.ref == 'refs/heads/dev'
-        uses: SamKirkland/FTP-Deploy-Action@v4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./build
-          server-dir: /public_html/dev
+          # Se branch == main → manda pra raiz (produção)
+          # Se branch == dev  → manda pra /public_html/dev (staging)
+          server-dir: ${{ github.ref == 'refs/heads/main' && '/public_html' || '/public_html/dev' }}
