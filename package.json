@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "if [ \"$CI\" != \"true\" ]; then react-snap; fi",
+    "postbuild": "if [ \\\"$SKIP_REACT_SNAP\\\" != \\\"true\\\" ]; then react-snap; fi",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
