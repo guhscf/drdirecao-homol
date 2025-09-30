@@ -34,9 +34,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build/
           server-dir: ./
-          dangerous-clean-slate: true
-          exclude: |
-            dev/**
 
       - name: Deploy Staging (dev)
         if: github.ref == 'refs/heads/dev'
@@ -47,6 +44,3 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build/
           server-dir: ./dev/
-          dangerous-clean-slate: true
-          exclude: |
-            dev/**
