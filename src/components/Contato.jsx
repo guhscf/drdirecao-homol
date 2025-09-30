@@ -11,7 +11,7 @@ export default function Contato() {
         {}
         <div>
           <p className="text-gray-600 mb-6">
-            Ligue, envie uma mensagem no WhatsApp ou entre em contato conosco pelas redes sociais.
+            Ligue, envie uma mensagem no WhatsApp ou entre em contato conosco pelas redes sociais
           </p>
           <div className="flex gap-4 mb-8">
             <a
