@@ -12,11 +12,11 @@ export default function Depoimentos() {
   // Link fixo para todas as avaliações no Google Maps
   const googleReviewsUrl =
     "https://www.google.com/maps/place/?q=place_id:ChIJ763r2Qbx3JQRcsR_vqJLWYk";
-    
+
   useEffect(() => {
     async function fetchReviews() {
       try {
-        const res = await fetch("https://drdirecao.com.br/api/reviews");
+        const res = await fetch("/api/reviews.php");
         const data = await res.json();
 
         if (data.result && data.result.reviews) {
@@ -29,7 +29,6 @@ export default function Depoimentos() {
       }
     }
 
-    
     fetchReviews();
   }, []);
 
