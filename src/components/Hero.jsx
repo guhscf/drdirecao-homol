@@ -6,7 +6,7 @@ export default function Hero() {
     >
       {/* Imagem logo abaixo da navbar */}
       <img
-        src="/banner.png"   // coloque sua imagem em public/banner.png
+        src="/Banner.png"   // coloque sua imagem em public/banner.png
         alt="Banner DR Direção"
         className="mx-auto mb-6 max-w-4xl w-full h-auto"
       />
