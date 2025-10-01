@@ -4,13 +4,16 @@ export default function Hero() {
       id="inicio"
       className="bg-gradient-to-b from-gray-100 to-white text-center py-16 px-4 mt-16"
     >
-
-      <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
-        Oficina de Direção Hidráulica
-      </h1>
-
-      <p className="mt-4 text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-        Mais de 18 anos de experiência cuidando da sua segurança na estrada.
+      {/* Imagem logo abaixo da navbar */}
+      <img
+        src="/banner.png"   // coloque sua imagem em public/banner.png
+        alt="Banner DR Direção"
+        className="mx-auto mb-6 max-w-4xl w-full h-auto"
+      />
+      <p className="mt-4 text-base md:text-lg text-black-600 max-w-2xl mx-auto">
+        <strong>
+          Mais de 18 anos de experiência cuidando da sua segurança na estrada.
+        </strong>
       </p>
 
       <a
